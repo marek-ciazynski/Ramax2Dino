@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DinoFoodStatistics : MonoBehaviour
 {
     [SerializeField] private Collider2D headCollider;
+    [SerializeField] private Text timer;
+    [SerializeField] private float timeLeft = 30f;
+    [SerializeField] private bool timerOn = true;
     private Dictionary<string, int> statistics;
     // Start is called before the first frame update
 
@@ -20,6 +25,21 @@ public class DinoFoodStatistics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(timerOn)
+        {
+            if(timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+                timer.text = ((int)timeLeft).ToString();
+            }
+            else
+            {
+                Statistics.statistics = statistics;
+                SceneManager.LoadScene("FinalScene", LoadSceneMode.Single);
+                timeLeft = 0;
+                timerOn = false;
+            }
+        }
     }
 
 

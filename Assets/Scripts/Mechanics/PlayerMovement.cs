@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,8 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Collider2D foodCollider;
     public CharacterController2D controller;
 	public Animator animator;
-
-	public float runSpeed = 40f;
+    public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
 	bool jump = false;
