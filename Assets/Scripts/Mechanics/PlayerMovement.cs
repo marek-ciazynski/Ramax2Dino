@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
@@ -25,7 +23,8 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
-		} else if (Input.GetButtonUp("Crouch"))
+		} 
+		else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
 		}
