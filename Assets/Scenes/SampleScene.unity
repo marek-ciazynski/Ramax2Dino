@@ -139,6 +139,8 @@ GameObject:
   - component: {fileID: 250650664}
   - component: {fileID: 250650666}
   - component: {fileID: 250650667}
+  - component: {fileID: 250650668}
+  - component: {fileID: 250650669}
   m_Layer: 3
   m_Name: Dino_zam_1
   m_TagString: Untagged
@@ -275,6 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ae2f68b26f5164cb4800b2c1ce4b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodCollider: {fileID: 250650669}
   controller: {fileID: 250650665}
   animator: {fileID: 250650659}
   runSpeed: 25
@@ -302,19 +305,7 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 0}
   m_OnLanded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 250650664}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnLanded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!70 &250650666
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -382,7 +373,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.78, y: 1.57}
+  m_Offset: {x: 1.78, y: 2.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -393,7 +384,65 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3, y: 1.39}
+  m_Size: {x: 2.3, y: 0.59}
+  m_EdgeRadius: 0
+--- !u!114 &250650668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250650658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3acd4604a5b0f4b438e86798c15d07f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headCollider: {fileID: 250650667}
+--- !u!61 &250650669
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250650658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 7629b38b9b8be7c44896d6e9214d59f6, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2, y: 4.38}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.45, y: 5.29}
+    newSize: {x: 5.45, y: 5.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.71, y: 3.14}
   m_EdgeRadius: 0
 --- !u!1 &287997869
 GameObject:

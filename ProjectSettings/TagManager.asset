@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Banan
+  - Brokul
+  - Ciastko
+  - Ciasto
+  - Frytka
+  - Hamburger
+  - Lemur
+  - Marchewka
+  - Muffinka
+  - Opona
+  - Pczek
+  - Pizza
+  - Pomidor
+  - Siekiera
+  - Tea
+  - Trumna
   layers:
   - Default
   - TransparentFX

@@ -1,13 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-	public CharacterController2D controller;
+    [SerializeField] private Collider2D foodCollider;
+    public CharacterController2D controller;
 	public Animator animator;
 
 	public float runSpeed = 40f;
@@ -15,11 +13,11 @@ public class PlayerMovement : MonoBehaviour
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
+	private int foodInDinoHeadZone = 0;
 
 	// Update is called once per frame
 	void Update()
 	{
-
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		animator.SetFloat("Speed", Math.Abs(horizontalMove));
@@ -51,12 +49,27 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-	public void OnLanded()
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+		foodInDinoHeadZone += 1;
+        animator.SetBool("IsEating", true);
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        foodInDinoHeadZone -= 1;
+		if (foodInDinoHeadZone == 0)
+		{
+            animator.SetBool("IsEating", false);
+        }
+    }
+
+    public void OnLanded()
 	{
 		animator.SetBool("IsJumping", false);
 	}
 
-	void FixedUpdate()
+    void FixedUpdate()
 	{
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);

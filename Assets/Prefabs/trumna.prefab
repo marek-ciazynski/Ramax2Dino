@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9103579195446023672}
   m_Layer: 0
   m_Name: trumna
-  m_TagString: Untagged
+  m_TagString: Trumna
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
