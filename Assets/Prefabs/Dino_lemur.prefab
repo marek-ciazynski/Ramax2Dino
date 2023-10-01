@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 266630920622774821}
   m_Layer: 0
   m_Name: Dino_lemur
-  m_TagString: Untagged
+  m_TagString: Lemur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
