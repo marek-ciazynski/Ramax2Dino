@@ -11,6 +11,7 @@ public class FinalInfo : MonoBehaviour
     {
         var dd = Statistics.statistics;
         var maxValue = dd.Aggregate((x, y) => x.Value >= y.Value ? x : y).Key;
+
         GameObject dino = dinoPrefabs.ToList().Where(x => x.tag == maxValue).First();
         GameObject gameObject = Instantiate(
             dino,

@@ -7,19 +7,21 @@ TagManager:
   - Banan
   - Brokul
   - Ciastko
-  - Ciasto
   - Frytka
   - Hamburger
   - Lemur
   - Marchewka
   - Muffinka
   - Opona
-  - Pczek
   - Pizza
   - Pomidor
   - Siekiera
-  - Tea
   - Trumna
+  - Tort
+  - Ciasto
+  - Herbata
+  - Tea
+  - "P\u0105czek"
   layers:
   - Default
   - TransparentFX
