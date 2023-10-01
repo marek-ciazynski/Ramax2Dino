@@ -65,11 +65,10 @@ public class OpenAiGenerator : MonoBehaviour
 
     private List<string> GetTopFoodByCount(int top) {
         var stats = Statistics.statistics;
-        stats.OrderByDescending(kv => kv.Key)
+        return stats.OrderByDescending(kv => kv.Key)
             .Take(top)
             .Select(kv => kv.Key)
             .ToList();
-        return new List<string> {};
     }
 
 }
