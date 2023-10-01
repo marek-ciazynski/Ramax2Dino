@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 		{
 			animator.SetBool("IsEating", true);
 			Debug.Log("Dino fire1");
+			// var openaiApi = new OpenAiGenerator();
+			// openaiApi.
 		}
 		else if (Input.GetButtonUp("Fire1"))
 		{
